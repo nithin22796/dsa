@@ -1,48 +1,40 @@
 # DSA Practice
 
-## Structure
-- `arrays/` — Array problems
-- `hashmaps/` — HashMap problems
-- `strings/` — String problems
-- `two-pointers/` — Two pointer problems
-- `sliding-window/` — Sliding window problems
-- `trees/` — Tree problems
-- `graphs/` — Graph problems
-- `dynamic-programming/` — DP problems
+A collection of DSA problems solved in TypeScript, organized by topic.
 
-## Progress Tracker
+## Topics
 
 ### Arrays & HashMaps
-- [ ] Contains Duplicate
-- [ ] Two Sum
-- [ ] Valid Anagram
-- [ ] Group Anagrams
-- [ ] Top K Frequent Elements
+Core pattern: use a `Set` or `Map` to reduce O(n²) brute force to O(n).
+
+| Problem | Difficulty | Key Concept |
+|---|---|---|
+| [Contains Duplicate](./arrays/contains-duplicate.ts) | Easy | HashSet, early exit |
+| [Two Sum](./arrays/two-sum.ts) | Easy | HashMap complement lookup |
 
 ### Two Pointers
-- [ ] Valid Palindrome
-- [ ] Three Sum
-- [ ] Container With Most Water
+Coming soon.
 
 ### Sliding Window
-- [ ] Best Time to Buy and Sell Stock
-- [ ] Longest Substring Without Repeating Characters
+Coming soon.
 
 ### Trees
-- Coming soon
+Coming soon.
 
 ### Dynamic Programming
-- Coming soon
+Coming soon.
 
 ## Big O Cheatsheet
 
 | Big O | Name | Example |
 |---|---|---|
-| O(1) | Constant | Array index access, Map lookup |
+| O(1) | Constant | Array index access, Map/Set lookup |
 | O(n) | Linear | Single loop |
 | O(n²) | Quadratic | Nested loops |
 | O(log n) | Logarithmic | Binary search |
 
-## Key Insight
-`Array.includes()` looks like O(1) but is O(n) — it scans the array.
-`Map.has()` and `Set.has()` are truly O(1) — use these for lookups.
+## Key Patterns
+
+- `Array.includes()` → O(n) — scans the array
+- `Set.has()` / `Map.has()` → O(1) — instant lookup
+- See a nested loop? Ask: can a Map eliminate the inner loop?

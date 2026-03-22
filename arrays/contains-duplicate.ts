@@ -14,9 +14,21 @@
 
 function containsDuplicate(nums: number[]): boolean {
   // your solution here
+  // Approach 1: Using a Set to track unique elements
+  // return new Set(nums).size !== nums.length;
+
+  // Approach 2: Using set and manually adding elements to it
+  const newSet = new Set<number>();
+  for (const num of nums) {
+    if (newSet.has(num)) {
+      return true; // Duplicate found
+    }
+    newSet.add(num);
+  }
+  return false;
 }
 
 // Test cases
-console.log(containsDuplicate([1, 2, 3, 1]))  // true
-console.log(containsDuplicate([1, 2, 3, 4]))  // false
-console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))  // true
+console.log(containsDuplicate([1, 2, 3, 1])); // true
+console.log(containsDuplicate([1, 2, 3, 4])); // false
+console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])); // true
